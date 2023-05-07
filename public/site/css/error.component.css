@@ -1,0 +1,42 @@
+
+.error-block{
+    text-align: center;
+   width: 100%;
+   align-items: center;
+   
+}
+
+.error-block h3{
+    font-size: 150px;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+   
+}
+
+.error-block h4{
+    font-size: 40px;
+}
+
+.error-block p{
+    color: gray;
+}
+
+.error-block a{
+    color: var(--primary-color);
+}
+
+.error-block a:hover{
+    color: var(--primary-color-hover);
+    text-decoration: none;
+}
+
+
+
+.error-block .img-container img{
+    width: 50%;
+    text-align: center;
+}
+
+.cart-empty a {
+    color: white
+}

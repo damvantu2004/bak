@@ -1,0 +1,72 @@
+
+
+.order-success-banner {
+    background-image: url("../img/about/banner-6.png");
+    
+}
+
+h2{
+    margin-bottom: 1.5rem;
+}
+
+input.form-control, select.form-control{
+  height:  calc(2rem + .75rem + 2px);
+}
+
+.place-order-btn{
+    text-transform: uppercase;
+    width: 100%;
+    padding: 0.8rem 0;
+    border-radius: 3px;
+}
+
+.bill-form-block{
+    border-right: 1px solid lightgray;
+    padding-right: 3rem;
+}
+
+.checkout-table td{
+    vertical-align: middle;
+}
+td.checkout-pro-title{
+    display: flex;
+   
+}
+.checkout-pro-quantity{
+    font-size: 16px;
+}
+.checkout-pro-info{
+  
+   padding-top: 10px;
+   padding-left: 15px;
+}
+
+.checkout-pro-info p{
+    color: var(--primary-color);
+    font-weight: bold;
+
+    font-size: 15px;
+}
+
+.checkout-table tbody tr td{
+
+    border-top:  none;
+  
+}
+
+.checkout-table tbody tr{
+    border-bottom: 1px solid #dee2e6;
+}
+td.checkout-pro-title img{
+    width: 70px;
+    height: 70px;
+}
+
+td.checkout-pro-title h5{
+    display: inline;
+    padding-left: 15px;
+}
+
+.checkout-fee{
+    font-size: 15px;
+}

@@ -1,0 +1,110 @@
+
+
+
+
+.content-block{
+    padding-bottom: 30px;
+}
+
+.blog-right-side .top_product_widget .post_item .media-body .discount-price{
+	color: var(--primary-color);
+	font-weight: bold;
+	display: inline;
+}
+.blog-right-side .top_product_widget .post_item .media-body .old-price{
+	text-decoration: line-through;
+	display: inline;
+	margin-left: 20px;
+}
+
+
+.top-link:hover {
+	color: var(--primary-color) !important;
+}
+/* .filter-range-wrap .range-slider .price-input {
+	position: relative;
+}
+
+.filter-range-wrap .range-slider .price-input p {
+	font-size: 16px;
+	color: #0d0d0d;
+	font-weight: 500;
+	display: inline-block;
+	margin-bottom: 0;
+}
+
+.filter-range-wrap .range-slider .price-input:after {
+	position: absolute;
+	left: 81px;
+	top: 12px;
+	height: 1px;
+	width: 5px;
+	background: #0d0d0d;
+	content: "";
+}
+
+.filter-range-wrap .range-slider .price-input input {
+	font-size: 16px;
+	color: #0d0d0d;
+	max-width: 16%;
+	border: none;
+}
+
+.filter-range-wrap .range-slider .price-input input:nth-child(1) {
+	margin-right: 28px;
+}
+
+.filter-range-wrap .price-range {
+	border-radius: 0;
+	margin-bottom: 28px;
+}
+
+.filter-range-wrap .price-range.ui-widget-content {
+	border: none;
+	background: rgba(0, 0, 0, 0.1);
+	height: 5px;
+}
+
+.filter-range-wrap .price-range.ui-widget-content .ui-slider-handle {
+	height: 14px;
+	width: 14px;
+	border-radius: 50%;
+	background: #ca1515;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.filter-range-wrap .price-range .ui-slider-range {
+	background: #ca1515;
+	border-radius: 0;
+}
+ */
+
+.slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: slider-horizontal;
+    width: 100%;
+    height: 4px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 20px;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: var(--primary-color);
+    cursor: pointer;
+  }

@@ -1,0 +1,1 @@
+ErrorDocument 404 /bakya_mvc/Application/Views/shared/site/404.php

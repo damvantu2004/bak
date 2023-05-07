@@ -1,0 +1,22 @@
+.header{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-brand{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+/* .top-bar {
+position: relative;
+ 
+  width: 100%;
+  
+  transition: top 1.5s;} */
+
+  /* .navbar {
+    position: relative;
+    transition: top 1.5s;
+  } */

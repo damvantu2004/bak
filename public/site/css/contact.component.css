@@ -1,0 +1,63 @@
+
+.contact h2{
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+
+.contact-form button.send-mess-btn{
+	background-color: var(--primary-color);
+	border: 1px solid var(--primary-color);
+	color: white;
+	padding: 8px 20px;
+	font-weight: 490;
+	border-radius: 5px;
+	display: inline-block;
+
+
+}
+
+.contact-form button.send-mess-btn:hover{
+	background-color:  var(--primary-color-hover);
+	
+}
+
+.contact-detail ul li .contact-detail-block{
+    display: flex;
+
+}
+
+.contact-detail ul li .contact-detail-block .contact-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.contact-detail ul li {
+    padding-bottom: 15px;
+}
+
+.contact-detail ul li h4{
+    margin-bottom: 0.3rem;
+}
+.contact-detail ul li .contact-detail-block .contact-info{
+    padding-left: 20px;
+}
+.contact-loc-desc{
+    margin-bottom: 30px;
+}
+.phone{
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+}
+
+.contact-form-block .contact-form .form-control{
+    padding: 1rem 1.5rem ;
+}
+
+

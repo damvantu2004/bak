@@ -1,0 +1,84 @@
+:root{
+    --bg-color : #fff;
+    --primary-color : #c8aa7b;
+    --primary-color-light:  rgba(201, 170, 123, 1);
+    --secondary-color: #fffcf7;
+    --product-border-color: #f0e5d4;
+	--primary-color-hover:#AB9169;
+	--required:#ffc107;
+	--invalid: #f02849;
+	--minlength: #117a8b;
+}
+.btn-root{
+	background-color: var(--primary-color);
+	color: white;
+	font-weight: bolder;
+	
+}
+
+.btn-root:hover{
+	color: white;
+	background-color:var(--primary-color-hover);
+}
+
+
+.required-error{
+    border-color: var(--required)!important;
+    color: var(--required);
+  }
+   
+  .invalid-error{
+    border-color: var(--invalid)!important;
+    color: var(--invalid);
+  }
+  .minlength-error{
+	  border-color:var(--minlength)!important ;
+	  color: var(--minlength);
+  }
+
+.blog-pagination {
+	margin-top: 0px;
+	padding-left: 15px;
+}
+
+.blog-pagination .page-link {
+	font-size: 14px;
+	position: relative;
+	display: block;
+	padding: 0;
+	text-align: center;
+	margin-left: -1px;
+	line-height: 45px;
+	width: 45px;
+	height: 45px;
+	border-radius: 0 !important;
+	color: #8a8a8a;
+	border: 1px solid #f0e9ff;
+	margin-right: 10px
+}
+
+.blog-pagination .page-link:hover{
+	background-color: var(--primary-color-hover);
+	color: #fff;
+}
+
+.blog-pagination .page-link:focus{
+	box-shadow: none;
+}
+
+.blog-pagination .page-link i,
+.blog-pagination .page-link span {
+	font-size: 13px
+}
+
+.blog-pagination .page-item.active .page-link {
+	background-color: var(--primary-color);
+	border-color: #f0e9ff;
+	color: #fff
+}
+
+.blog-pagination .page-item:last-child .page-link {
+	margin-right: 0
+}
+
+
