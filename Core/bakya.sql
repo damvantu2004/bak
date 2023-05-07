@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1:3307
--- Thời gian đã tạo: Th6 06, 2021 lúc 10:59 AM
--- Phiên bản máy phục vụ: 10.4.14-MariaDB
--- Phiên bản PHP: 7.4.11
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th5 07, 2023 lúc 09:48 AM
+-- Phiên bản máy phục vụ: 10.4.24-MariaDB
+-- Phiên bản PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -48,15 +48,14 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`id`, `fname`, `lname`, `email`, `phone`, `password`, `remember_token`, `province`, `address`, `role`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Phuc', 'Nguyen', 'phucnguyen@example.com', '0946532665', '$2y$10$C0FFUaFas4puu0Q/RBVI4OV/SgcWCpTizmP9wzXh4tWZwX4ON93bu', NULL, 'Hà Nội', '121 Cầu Giấy', 'customer', 1, '2021-04-17', '2021-04-17'),
-(2, 'Phuc', 'Nguyen', 'admin@example.com', '0946532685', '$2y$10$kdpnDlwi2WHr8JZPck/kZOOGS4htIcq8QEyPDz1OM7J0J.kG/b7TK', NULL, 'Hà Nội', '121 Cầu Giấy', 'admin', 1, '2021-04-18', '2021-04-18'),
-(3, 'Harry', 'Potter', 'admin2@example.com', '0946532675', '25d55ad283aa400af464c76d713c07ad', '', 'Hà Nội', '121 Cầu Giấy', 'admin', 1, '2021-04-18', '2021-04-18'),
-(4, 'Hermione', 'Granger', 'hermione@example.com', '0123455788', 'e10adc3949ba59abbe56e057f20f883e', NULL, 'Hà Nội', 'Hoan Kiem', 'customer', 1, '2021-04-18', '2021-04-18'),
-(5, 'Viet Hoang', 'Nguyen', 'nvh@example.com', '0123555888', '$2y$10$HqE/RImqc7NJS3d02gNO/u./5UstOM1HLJABRB9kkgXyx855wRbzW', NULL, 'Hà Nội', '80 Nguyen Khang', 'customer', 1, '2021-04-18', '2021-04-18'),
-(6, 'Hong Anh', 'Nguyen', 'anhnth@example.com', '0345556256', '$2y$10$a7svRwDCca3nsGhtLWJuLOLqYgx1UOBYDcTsQ6ixgIq5WnjT6W2m6', NULL, 'Hà Nội', 'Cho Long Bien', 'customer', 1, '2021-04-18', '2021-04-20'),
-(7, 'Thai Duong', 'Tran', 'duongtt@example.com', '0123555889', '$2y$10$NVmb0OPjsKd2No06H7dGNOt/1N2XCZHLJQAGfZjMHGmFEfCwYXOLW', NULL, 'Hà Nội', 'Hoan Kiem', 'customer', 1, '2021-04-18', '2021-04-18'),
-(8, 'Phuc', 'Nguyen', 'phucnguyen1@example.com', '0946582665', '25f9e794323b453885f5181f1b624d0b', '', 'Hà Nội', '121 Cầu Giấy', 'customer', 1, '2021-04-17', '2021-05-31'),
-(9, 'Tri Hung', 'Nguyen', 'hungnguyen@example.com', '0526478951', '25d55ad283aa400af464c76d713c07ad', '', 'Hà Nội', 'Rive Park. vu Trong Phung', 'customer', 1, '2021-05-26', '2021-05-31'),
+(1, 'Pham', 'Dinh', 'duiga2611@gmail.com', '0123456789', '$2y$10$C0FFUaFas4puu0Q/RBVI4OV/SgcWCpTizmP9wzXh4tWZwX4ON93bu', NULL, 'Hà Nội', '', 'customer', 1, '2021-04-17', '2021-04-17'),
+(2, 'Pham', 'Dinh', 'admin@example.com', '0924755870', '$2y$10$kdpnDlwi2WHr8JZPck/kZOOGS4htIcq8QEyPDz1OM7J0J.kG/b7TK', NULL, 'Hà Nội', '', 'admin', 1, '2021-04-18', '2021-04-18'),
+(3, 'Duong', 'Dinh', 'admin2@example.com', '1234567890', '25d55ad283aa400af464c76d713c07ad', '', 'Hà Nội', '', 'admin', 1, '2021-04-18', '2021-04-18'),
+(5, 'Duong', 'Dinh', 'nvh@example.com', '012345678911', '$2y$10$HqE/RImqc7NJS3d02gNO/u./5UstOM1HLJABRB9kkgXyx855wRbzW', NULL, 'Hà Nội', '', 'customer', 1, '2021-04-18', '2021-04-18'),
+(6, 'Duiga', 'duiga', 'duigax2@example.com', '0345556256', '$2y$10$a7svRwDCca3nsGhtLWJuLOLqYgx1UOBYDcTsQ6ixgIq5WnjT6W2m6', NULL, 'Hà Nội', 'Cho Long Bien', 'customer', 1, '2021-04-18', '2021-04-20'),
+(7, 'Pham', 'Dinh', 'PhamDinh@example.com', '1122334455', '$2y$10$NVmb0OPjsKd2No06H7dGNOt/1N2XCZHLJQAGfZjMHGmFEfCwYXOLW', NULL, 'Hà Nội', 'Hoan Kiem', 'customer', 1, '2021-04-18', '2021-04-18'),
+(8, 'dinh', 'dz', 'uwuw@example.com', '111111111111', '25f9e794323b453885f5181f1b624d0b', '', 'Hà Nội', '', 'customer', 1, '2021-04-17', '2021-05-31'),
+(9, 'TEST', 'TEST', 'T1@example.com', '1234567891', '25d55ad283aa400af464c76d713c07ad', '', 'Hà Nội', 'Rive Park. vu Trong Phung', 'customer', 1, '2021-05-26', '2021-05-31'),
 (10, 'Dzuong', 'Dep Trai', 'dzdeptrai@example.com', '0128456395', '25d55ad283aa400af464c76d713c07ad', '', 'Đắk Lắk', 'buon ma thuot', 'customer', 1, '2021-06-06', '2021-06-06');
 
 -- --------------------------------------------------------
@@ -262,7 +261,7 @@ INSERT INTO `order` (`id`, `fname`, `lname`, `email`, `phone`, `province`, `addr
 (35, 'Harry', 'Potter', 'admin2@example.com', '0946532675', 'Hà Nội', '121 Cầu Giấy', '', 'Giaohangtietkiem', 'Cash on delivery', 1, 3, '2021-06-04', '2021-06-04', 0.300),
 (36, 'Harry', 'Potter', 'admin2@example.com', '0946532675', 'Hà Nội', '121 Cầu Giấy', '', 'Giaohangtietkiem', 'Cash on delivery', 1, 3, '2021-06-05', '2021-06-05', 0.300),
 (37, 'Harry', 'Potter', 'admin2@example.com', '0946532675', 'Hà Nội', '121 Cầu Giấy', 'deliver soon please', 'Giaohangnhanh', 'Cash on delivery', 1, 3, '2021-06-06', '2021-06-06', 0.300),
-(38, 'Dzuong', 'Dep Trai', 'dzdeptrai@example.com', '0128456395', 'Hà Nội', 'buon ma thuot', '', 'Giaohangtietkiem', 'Cash on delivery', 1, 10, '2021-06-06', '2021-06-06', 0.000);
+(38, 'Dzuong', 'Dep Trai', 'dzdeptrai@example.com', '0128456395', 'Hà Nội', 'buon ma thuot', '', 'Giaohangtietkiem', 'Cash on delivery', 3, 10, '2021-06-06', '2023-05-07', 0.000);
 
 -- --------------------------------------------------------
 
