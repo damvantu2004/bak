@@ -18,9 +18,7 @@ Bakery Online Shopping PHP MVC Project
 
 ## Login account
 
-- For customer site: 
-  + Email: phucnguyen1@example.com
-  + Pass:  123456789
+
 - For admin site: 
   + Email: admin2@example.com
   + Pass:  12345678
