@@ -207,6 +207,21 @@
                         </div>
                     </li>
 
+                    <li>
+                        <div class="chef-block">
+                            <div class="chef-img">
+                                <img src="./public/site/img/about/chef-1.png" alt="" style=" border-radius: 100%">
+                            </div>
+                            <div class="chef-info">
+                                <h5>Tuan Kiet </h5>
+                                <p>UwU</p>
+                            </div>
+                            <div class="chef-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                
+                            </div>
+                        </div>
+                    </li>
                     
                 </ul>
 
