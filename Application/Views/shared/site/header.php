@@ -68,13 +68,9 @@
             $position = strpos($svg_file, $find_string);
 
             $svg_file_new = substr($svg_file, $position);
-
-            // echo "<div style='width:100%; height:100%;' >" . $svg_file_new . "</div>";
-
             ?>
             <div class="logo">
-                <!-- <a class="navbar-brand" href="./"><img src="./public/site/img/home/logo/logo.png" alt="Bakya"></a> -->
-                <!-- <a class="navbar-brand" href="./"><img src="./public/site/img/home/logo/logo.png" alt="Bakya"></a> -->
+
                 <a class="navbar-brand" href="./">
                     <div><?= $svg_file_new ?></div>
                 </a>
@@ -86,7 +82,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav ml-auto my-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="./" title="home">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="./" title="Home">Trang Chủ<span class="sr-only">(current)</span></a>
                     </li>
 
                     <li class="nav-item">
@@ -94,11 +90,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href='./?controller=product&action=allProducts' title="product">Product</a>
+                        <a class="nav-link" href='./?controller=product&action=allProducts' title="product">Sản Phẩm</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href='./?controller=contact' title="contact">Contact</a>
+                        <a class="nav-link" href='./?controller=contact' title="contact">Liên Hệ</a>
                     </li>
 
                     <li class="nav-item">

@@ -1,7 +1,7 @@
 <?php require('./Config/province.php'); ?>
 <?php if (empty($_SESSION['user'])) : ?>
     <button class="signup-modal" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">
-        <i class="fas fa-user" style="font-size: 12px;"></i>Sign up
+        <i class="fas fa-user" style="font-size: 12px;"></i>SignUp
     </button>
 <?php endif; ?>
 
@@ -10,7 +10,7 @@
 
         <div class="main-form-content">
             <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <h5 class="text-center">Sign up</h5>
+            <h5 class="text-center">Đăng Ký</h5>
             <hr>
             <div class="row mb-3">
 
@@ -92,10 +92,7 @@
 </div>
 
 <script>
-    // Get the modal
     var modal = document.getElementById('id02');
-
-
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {

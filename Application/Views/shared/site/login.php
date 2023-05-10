@@ -1,25 +1,29 @@
 <?php
-if (!empty($_SESSION['user'])) {
-    $user_session = $_SESSION['user']; ?>
+if (!empty($_SESSION['user'])) 
+{
 
-    <span class='welcome'>Welcome! <?= $user_session['fname'] ?? '' ?> <?= $user_session['lname'] ?? '' ?></span>
+    $user_session = $_SESSION['user']; ?>
+    <span class='welcome'>Xin chào! <?= $user_session['fname'] ?? '' ?> <?= $user_session['lname'] ?? '' ?></span>
+
     <?php if ($user_session['role'] == 'admin') : ?>
         <a href='?module=admin&controller=customer&controller=dashboard'>
-            <button class='login-modal' style='width:auto'><i class="fas fa-user-cog" style='font-size: 14px'></i>To Admin Page</button>
+            <button class='login-modal' style='width:auto'><i class="fas fa-user-cog" style='font-size: 14px'></i>Tới Trang Admin</button>
         </a>
     <?php endif; ?>
+
+
+
     <a href='?controller=customer&action=viewProfile'>
         <button class='login-modal' style='width:auto'><i class='fas fa-user-edit' style='font-size: 14px'></i>Profile</button>
     </a>
     <a href='?controller=customer&action=listOrders'>
-        <button class='login-modal' style='width:auto'><i class='fas fa-receipt' style='font-size: 14px'></i>Order
-            history</button>
+        <button class='login-modal' style='width:auto'><i class='fas fa-receipt' style='font-size: 14px'></i>Lịch Sử Đơn Hàng</button>
     </a>
     <a href='?controller=verify&action=logout'>
-        <button class='login-modal' style='width:auto'><i class='fas fa-sign-out-alt' style='font-size: 14px'></i>Logout</button>
+        <button class='login-modal' style='width:auto'><i class='fas fa-sign-out-alt' style='font-size: 14px'></i>Đăng Xuất</button>
     </a>
 <?php } else { ?>
-    <button class='login-modal' onclick="document.getElementById('id01').style.display='block'" style='width:auto'><i class='fas fa-sign-in-alt' style='font-size: 14px'></i>Login</button>
+    <button class='login-modal' onclick="document.getElementById('id01').style.display='block'" style='width:auto'><i class='fas fa-sign-in-alt' style='font-size: 14px'></i>Đăng Nhập</button>
 <?php } ?>
 
 <div id="id01" class="modal">
@@ -39,8 +43,7 @@ if (!empty($_SESSION['user'])) {
                 <div class="main-form-content">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 
-                    <h5 class="text-center">Welcome </h5>
-                    <p class="text-center" style="margin-bottom: 3rem;">Login by entering the information below</p>
+                    <h5 class="text-center">Đăng Nhập </h5>
 
                     <label for="email"></label>
                     <input type="text" placeholder="Email address *" name="email" id="li-email" onkeyup="validateEmail(this)">
@@ -52,12 +55,12 @@ if (!empty($_SESSION['user'])) {
                     <small id="li-psw-err"></small>
 
 
-                    <button type="submit" class="login-btn">Continue</button>
+                    <button type="submit" class="login-btn">Tiếp tục</button>
 
                     <div class="signup-suggest">
-                        <span>Don't have an account?. </span>
+                        <span>Chưa có tài khoản?. </span>
                         <span onclick="document.getElementById('id01').style.display='none'; document.getElementById('id02').style.display='block'">
-                            Create on here</span>
+                            Đăng ký ngay</span>
                     </div>
                 </div>
             </div>
@@ -72,9 +75,7 @@ if (!empty($_SESSION['user'])) {
 </div>
 
 <script>
-    // Get the modal
     var modal = document.getElementById('id01');
-
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {

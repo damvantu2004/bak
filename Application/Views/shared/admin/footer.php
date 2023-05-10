@@ -13,9 +13,9 @@
 
 <footer class="main-footer">
     <div class="d-none d-sm-block" style="float: right">
-        <b>Version</b> 1.0
+        <b>D15CNPM2</b>
     </div>
-    <strong>Copyright &copy; 2023 <a href="">The Duiga</a>.</strong> All rights reserved.
+    Đinh Tùng Dương ,Phạm Hồng Định, Trần Tuấn Kiệt
 </footer>
 
 <!-- Control Sidebar -->

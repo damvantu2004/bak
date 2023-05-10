@@ -170,8 +170,8 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `message`, `name`, `email`, `phone`, `created_at`, `updated_at`) VALUES
-(1, 'I would like to book in avanced your catering service', 'Phuc Nguyen', 'phucnguyen@example.com', '0123456598', '2021-05-25', '2021-05-25'),
-(2, 'I would like to order a birthday cake for my aughter', 'Tri Hung Nguyen', 'hungnguyen@example.com', '0526478951', '2021-05-28', '2021-05-28');
+(1, 'I would like to book in avanced your catering service', 'Pham Dinh', 'phucnguyen@example.com', '0123456598', '2021-05-25', '2021-05-25'),
+(2, 'I would like to order a birthday cake for my aughter', 'Dinh Tung Duong', 'hungnguyen@example.com', '0526478951', '2021-05-28', '2021-05-28');
 
 -- --------------------------------------------------------
 

@@ -52,7 +52,7 @@ require './Config/menu.php'; ?>
 
                     <a href="?controller=verify&action=logout" class="nav-link">
 
-                        <i class="fas fa-sign-out-alt" style="font-size: 14px;"></i>Logout
+                        <i class="fas fa-sign-out-alt" style="font-size: 14px;"></i>Đăng xuất
 
                     </a>
 
@@ -61,8 +61,7 @@ require './Config/menu.php'; ?>
 
                     <a href="./" class="nav-link">
 
-                        <i class="fas fa-home" style="font-size: 14px;"></i>To Customer Page
-
+                        <i class="fas fa-home" style="font-size: 14px;"></i>Đến trang người dùng
                     </a>
 
                 </li>
