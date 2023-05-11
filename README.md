@@ -8,12 +8,6 @@ Bakery Online Shopping PHP MVC Project
 -DINH TUNG DUONG
 -TRAN TUAN KIET
 
-## Installation guide
-
-- Prerequisite: xampp. Download xampp and run
-- Create database name: localhost/phpmyadmin -> create database bakya
-- Open phpmyadmin and execute query in Core/bakya.sql
-
 
 ## Login account
 
