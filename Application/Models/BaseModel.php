@@ -71,6 +71,9 @@ class BaseModel extends Database
         $colums = implode(',', array_keys($data));
 
         $newValues = array_map(function ($value) {
+            if ($value === null) { // nếu value là null thì trả về NULL(dùng để insert null đối với email_verified_at)
+                return "NULL";
+            }
             return "'" . $value . "'";
         }, array_values($data));
 

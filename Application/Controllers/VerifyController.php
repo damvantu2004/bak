@@ -47,7 +47,7 @@ class VerifyController extends BaseController
 
         if ($user = $this->userModel->getUserByEmailAndPwd($input['email'], $input['password'])) {
             // Kiểm tra xem email đã được xác thực chưa
-            if (empty($user['email_verified_at'])) {
+            if (empty($user['email_verified_at'])) { // nếu cột email_verified_at trong bảng account là null
                 $message['all-error'] = 'Vui lòng xác thực email trước khi đăng nhập. Kiểm tra hộp thư của bạn.';
                 goto getBackToHome;
             }
