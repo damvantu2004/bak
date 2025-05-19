@@ -17,7 +17,10 @@ class CategoryModel extends BaseModel
 
     public function getAllWithCountAllStatus()
     {
-        $sql = "SELECT category.* , count(product.id) as count FROM category left join product on category_id = category.id GROUP by category_id";
+        $sql = "SELECT category.*, count(product.id) as count 
+                FROM category 
+                LEFT JOIN product ON product.category_id = category.id 
+                GROUP BY category.id, category.name, category.status, category.priority, category.created_at, category.updated_at";
         return $this->getByQuery($sql);
     }
 

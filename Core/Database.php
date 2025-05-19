@@ -17,7 +17,7 @@ class Database
 
     const USERNAME = 'root';
 
-    const PASSWORD = '';
+    const PASSWORD = 'hvnh2004';
 
     const DB_NAME = 'bakya';
 

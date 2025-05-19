@@ -9,18 +9,18 @@ class UserModel extends BaseModel
         // Đầu tiên, lấy thông tin người dùng dựa trên email
         $sql = "SELECT * FROM " . self::TABLE . " WHERE email = '" . $email . "'";
         $user = $this->getFirstByQuery($sql);
-        
+
         if (!$user) {
             return null; // Không tìm thấy email
         }
-        
+
         // Kiểm tra xem mật khẩu được mã hóa bằng bcrypt hay md5
         if (password_verify($password, $user['password'])) {
             return $user; // Mật khẩu bcrypt đúng
         } elseif ($user['password'] === md5($password)) {
             return $user; // Mật khẩu md5 đúng (cho các tài khoản cũ)
         }
-        
+
         return null; // Mật khẩu không đúng
     }
 
@@ -54,7 +54,15 @@ class UserModel extends BaseModel
 
     public function getTopCustomers()
     {
-        $sql = "SELECT count(`order`.account_id) as orders, sum(order_detail.price) as spendings, RANK() OVER (ORDER BY spendings DESC) rank, account.* from `order`, order_detail, account where order_detail.order_id = `order`.id and `order`.`account_id` = account.id group by account.id limit 5";
+        $sql = "SELECT count(`order`.account_id) as orders, 
+                sum(order_detail.price) as spendings, 
+                RANK() OVER (ORDER BY sum(order_detail.price) DESC) as `rank`, 
+                account.* 
+                FROM `order` 
+                JOIN order_detail ON order_detail.order_id = `order`.id 
+                JOIN account ON `order`.`account_id` = account.id 
+                GROUP BY account.id 
+                LIMIT 5";
         return $this->getByQuery($sql);
     }
 
@@ -162,21 +170,21 @@ class UserModel extends BaseModel
         $sql = "UPDATE account SET remember_token = NULL WHERE id = $userId";
         return $this->_query($sql);
     }
-    
+
     // Phương thức mới cho xác thực email
     public function saveVerificationToken($userId, $token)
     {
         $sql = "UPDATE account SET verification_token = '$token' WHERE id = $userId";
         return $this->_query($sql);
     }
-    
+
     public function verifyEmail($token)
     {
         $now = date('Y-m-d H:i:s');
         $sql = "UPDATE account SET email_verified_at = '$now', verification_token = NULL WHERE verification_token = '$token'";
         return $this->_query($sql);
     }
-    
+
     public function isEmailVerified($userId)
     {
         $sql = "SELECT email_verified_at FROM account WHERE id = $userId";
@@ -184,7 +192,7 @@ class UserModel extends BaseModel
         $result = mysqli_fetch_assoc($query);
         return $result && !empty($result['email_verified_at']);
     }
-    
+
     public function getUserByVerificationToken($token)
     {
         $sql = "SELECT * FROM account WHERE verification_token = '$token'";

@@ -18,11 +18,11 @@ class OrderController extends BaseController
 
     public function index()
     {
-        $orders = $this->orderModel->getAllPaginate();
+        $orders = $this->orderModel->getAllOrderPaginate();
         $page = (isset($_GET['page'])) ? $_GET['page'] : 1;
         $links = 2;
         return $this->view('admin.order.index', [
-            "data" => $orders->getData(7, $page)->data,
+            "orders" => $orders->getData(7, $page)->data,
             'pagination' => $orders->createLinks($links, 'pagination')
         ]);
     }
@@ -56,14 +56,14 @@ class OrderController extends BaseController
     {
         $orderId = $_POST['id'] ?? 0;
         $status = $_POST['status'] ?? 1;
-        
+
         $this->loadModel('OrderModel');
         $result = $this->orderModel->updateStatus($orderId, $status);
-        
+
         if ($result) {
             // Lấy thông tin đơn hàng và người dùng
             $order = $this->orderModel->getOrderDetailById($orderId);
-            
+
             // Gửi email thông báo
             require_once './Helper/MailService.php';
             $mailService = new MailService();
@@ -73,7 +73,7 @@ class OrderController extends BaseController
                 $orderId,
                 $status
             );
-            
+
             // Chuyển hướng với thông báo thành công
             header('location: ./?module=admin&controller=order&action=detail&id=' . $orderId . '&message=success');
         } else {

@@ -5,6 +5,8 @@ class CustomerController extends BaseController
     protected $userModel;
     protected $bannerModel;
     protected $orderModel;
+    protected $banners;
+    protected $bannersHistory;
 
     public function __construct()
     {

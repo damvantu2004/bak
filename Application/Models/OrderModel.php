@@ -42,9 +42,15 @@ class OrderModel extends BaseModel
     public function getAllOrderPaginate()
     {
 
-        $sql = "SELECT `order`.*, sum(price) as total, sum(quantity) as quantity FROM `order` , order_detail WHERE `order`.id = order_detail.order_id GROUP BY `order`.id ORDER BY `order`.id DESC";
+        $sql = "SELECT `order`.*, sum(price) as total, sum(quantity) as quantity 
+        FROM `order` , order_detail 
+        WHERE `order`.id = order_detail.order_id 
+        GROUP BY `order`.id 
+        ORDER BY `order`.id DESC";
         return $this->paginate($sql);
     }
+
+
 
     public function getOrderDetailById($id)
     {
