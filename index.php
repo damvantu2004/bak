@@ -1,5 +1,7 @@
 <?php
 session_start();
+// Thêm autoload của Composer để load các thư viện bên ngoài
+require './vendor/autoload.php';
 require './Core/UploadFile.php';
 require './Core/Database.php';
 require './Helper/Common.php';

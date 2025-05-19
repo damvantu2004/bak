@@ -13,6 +13,18 @@
         <?= $message['success-login'] ?? '' ?>
     </div>
 <?php } ?>
+<?php if (!empty($message['success-register'])) { ?>
+    <div class="alert alert-success" style="margin-bottom: 0;" id="success-register">
+        <button onclick="document.getElementById('success-register').style.display='none'" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <?= $message['success-register'] ?? '' ?>
+    </div>
+<?php } ?>
+<?php if (!empty($message['success-verify'])) { ?>
+    <div class="alert alert-success" style="margin-bottom: 0;" id="success-verify">
+        <button onclick="document.getElementById('success-verify').style.display='none'" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <?= $message['success-verify'] ?? '' ?>
+    </div>
+<?php } ?>
 <?php if (!empty($success['add_to_cart'])) { ?>
     <div class="alert alert-warning" style="margin-bottom: 0;" id="success-add-to-cart">
         <button onclick="document.getElementById('success-add-to-cart').style.display='none'" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
