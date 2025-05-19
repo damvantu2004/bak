@@ -138,12 +138,25 @@ class MailService
             
             $statusText = $this->getStatusText($status);
             
+            // Tạo URL đầy đủ
+            $baseUrl = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https://" : "http://";
+            $baseUrl .= $_SERVER['HTTP_HOST'];
+            $scriptPath = str_replace('\\', '/', dirname($_SERVER['PHP_SELF']));
+            if ($scriptPath != '/') {
+                $baseUrl .= $scriptPath;
+            }
+            if (substr($baseUrl, -1) !== '/') {
+                $baseUrl .= '/';
+            }
+            
+            $orderDetailUrl = $baseUrl . "?controller=customer&action=orderDetail&id=" . $orderId;
+            
             $this->mail->isHTML(true);
             $this->mail->Subject = "Cập nhật đơn hàng #$orderId - $statusText";
             $this->mail->Body = "
                 <h2>Xin chào $name!</h2>
                 <p>Đơn hàng #$orderId của bạn đã được cập nhật sang trạng thái: <strong>$statusText</strong>.</p>
-                <p>Xem chi tiết đơn hàng tại <a href='./?controller=customer&action=orderDetail&id=$orderId'>đây</a>.</p>
+                <p>Xem chi tiết đơn hàng tại <a href='$orderDetailUrl'>đây</a>.</p>
                 <p>Trân trọng,<br>Bakya Shop</p>
             ";
             
