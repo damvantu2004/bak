@@ -63,7 +63,7 @@ class CouponModel extends BaseModel
         $used_times = $data["used_times"];
         $updated_at = $data["updated_at"];
 
-        $sql = "UPDATE `coupon` SET status=$status, used_times = $used_times, updated_at=$updated_at where id = '$id'";
+        $sql = "UPDATE `coupon` SET status=$status, used_times = $used_times, updated_at='$updated_at' where id = '$id'";
         $query = $this->_query($sql);
     }
 

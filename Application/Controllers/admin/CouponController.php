@@ -70,6 +70,14 @@ class CouponController extends BaseController
             'updated_at' => date("Y-m-d", time())
         ];
         $coupon = $this->couponModel->findCouponById($_GET['id']);
+        
+        if(!$coupon) {
+            $this->message['error-notfound'] = 'Coupon not found';
+            return $this->view('admin.coupon.edit', [
+                'message' => $this->message
+            ]);
+        }
+        
         if (sizeof($this->couponModel->checkIdUnique($_POST['id'], $coupon['id'])) == 1) {
             $this->message['error-name'] = 'This coupon is already existing';
         } else {

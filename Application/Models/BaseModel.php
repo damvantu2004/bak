@@ -95,7 +95,7 @@ class BaseModel extends Database
 
         $dataSetString = implode(',', $dataSets);
 
-        $sql = "UPDATE `${table}` SET ${dataSetString} WHERE id = ${id}";
+        $sql = "UPDATE `${table}` SET ${dataSetString} WHERE id = '${id}'";
 
         $this->_query($sql);
     }
