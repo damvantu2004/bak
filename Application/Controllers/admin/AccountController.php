@@ -116,6 +116,8 @@ class AccountController extends BaseController
                 'role'              => $input['role'],
                 'address'           => $input['address'],
                 'password'          => md5($input['password']),
+                'email_verified_at' => date("Y-m-d H:i:s"),
+
             ];
         $created_user = $this->userModel->createData($data);
         if ($created_user['email'] == $input['email']) {

@@ -1,5 +1,6 @@
 <?php
 session_start();
+require './vendor/autoload.php';
 require './Core/UploadFile.php';
 require './Core/Database.php';
 require './Helper/Common.php';
