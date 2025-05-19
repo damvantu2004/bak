@@ -260,7 +260,23 @@ class CustomerController extends BaseController
             'status' => 3,
             'updated_at' => date("Y-m-d", time())
         ];
+        
         $this->orderModel->updateData($id, $data);
+        
+        // Gửi email thông báo hủy đơn hàng
+        $order = $this->orderModel->getOrderDetailById($id);
+        
+        // Gửi email thông báo
+        require_once './Helper/MailService.php';
+        $mailService = new MailService();
+        
+        $mailService->sendOrderStatusEmail(
+            $order['email'],
+            $order['fname'] . ' ' . $order['lname'],
+            $id,
+            3 // Trạng thái hủy đơn hàng
+        );
+        
         header("location: ./?controller=customer&action=orderDetail&id=$id");
     }
 }

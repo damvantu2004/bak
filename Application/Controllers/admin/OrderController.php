@@ -43,14 +43,32 @@ class OrderController extends BaseController
     public function update()
     {
         $id = $_GET['id'] ?? null;
+        $oldStatus = $this->orderModel->getOrderDetailById($id)['status'];
+        $newStatus = $_POST['status']; // lấy trạng thái mới từ form ở view
+        
         $data = [
-            'status' => $_POST['status'],
+            'status' => $newStatus,
             'updated_at' => date("Y-m-d", time())
         ];
 
         $this->orderModel->updateData($id, $data);
-        // $this->message['success-edit'] = 'Order updated successfully';
-
+        
+        // Gửi email thông báo nếu trạng thái đơn hàng thay đổi
+        if ($oldStatus != $newStatus) {
+            $order = $this->orderModel->getOrderDetailById($id);
+            
+            // Gửi email thông báo
+            require_once './Helper/MailService.php';
+            $mailService = new MailService();
+            
+            $mailService->sendOrderStatusEmail(
+                $order['email'],
+                $order['fname'] . ' ' . $order['lname'],
+                $id,
+                $newStatus
+            );
+        }
+        
         header("location: ./?module=admin&controller=order&action=detail&id=$id");
     }
 
